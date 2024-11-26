@@ -241,7 +241,7 @@ async function getFloodSummary(articlesText) {
             body: JSON.stringify({
                 model: 'llama-3.1-70b-versatile',  // The desired model
                 messages: [
-                    { role: 'user', content: `Summarize the following flood-related posts focusing on disaster information only.  Give response as a decision support system :\n\n${articlesText}` }
+                    { role: 'user', content: `Summarize the following flood-related posts focusing on disaster information only :\n\n${articlesText}  Give response as a decision support system. Mention Plan of action to rescue the people` }
                 ],
                 max_tokens: 300  // Adjust for the summary length
             })
