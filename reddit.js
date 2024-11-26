@@ -18,7 +18,7 @@ async function summarizePosts(postData) {
     const response = await axios.post(url, {
       model: 'llama-3.1-70b-versatile', // Use the desired model
       messages: [
-        { role: 'user', content: `Summarize the following flood-related posts focusing on disaster information only. Give response as a decision support system :\n\n${postData}.`  }
+        { role: 'user', content: `Summarize the following flood-related posts focusing on disaster information only.\n\n${postData}.  Give response as a decision support system. Mention Plan of action to rescue the people`  }
       ],
       max_tokens: 300 // Adjust for the summary length
     }, {
